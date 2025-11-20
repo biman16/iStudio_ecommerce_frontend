@@ -8,8 +8,47 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Our online Store</h1>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">YourLogo</a>
+            </div>
+            <nav class="navigation-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products...">
+                    <button type="submit">Search</button>
+                </div>
+                <div class="shopping-cart">
+                    <a href="#">
+                        <span class="cart-icon">&#128722;</span>
+                        <span class="cart-badge">0</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
     </header>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Biggest Sale of the Year!</h1>
+                <p>Don't miss out on our exclusive deals and discounts.</p>
+                <a href="#" class="cta-button">Shop Now</a>
+            </div>
+        </section>
+    </main>
     <script src="scripts/app.js"></script>
 </body>
 </html>
