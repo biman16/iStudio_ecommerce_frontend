@@ -1,9 +1,15 @@
-console.log("E-Commerce Website Loaded");
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navigationMenu = document.querySelector('.navigation-menu');
+document.addEventListener('DOMContentLoaded', function () {
+    const searchIcon = document.getElementById('searchIcon');
+    const searchBar = document.getElementById('searchBar');
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const navigationMenu = document.getElementById('navigationMenu');
 
-    hamburgerMenu.addEventListener('click', () => {
+    searchIcon.addEventListener('click', function (event) {
+        event.preventDefault();
+        searchBar.classList.toggle('active');
+    });
+
+    hamburgerMenu.addEventListener('click', function () {
         navigationMenu.classList.toggle('active');
     });
 });

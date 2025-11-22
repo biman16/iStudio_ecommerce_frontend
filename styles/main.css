@@ -1,5 +1,7 @@
+
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -8,7 +10,6 @@ body{
 /* Header Styles */
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #fff;
@@ -46,12 +47,15 @@ body{
 
 .search-bar {
     display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .search-bar input {
     border: 1px solid #ccc;
     padding: 8px;
     border-radius: 5px 0 0 5px;
+    width: 450px;
 }
 
 .search-bar button {
@@ -63,25 +67,34 @@ body{
     cursor: pointer;
 }
 
+.search-icon {
+    display: none;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+}
+
 .shopping-cart {
-    margin-left: 20px;
+    margin-left: 30px;
     position: relative;
+    scale: 1.5;
 }
 
 .shopping-cart a {
     text-decoration: none;
     color: #333;
-    font-size: 1.2em;
+    font-size: 0.7em;
 }
 
 .cart-badge {
     position: absolute;
-    top: -5px;
-    right: -10px;
+    top: -2px;
+    right: -7px;
     background-color: red;
     color: white;
-    border-radius: 50%;
-    padding: 2px 5px;
+    border-radius: 40%;
+    padding: 1px 4px;
     font-size: 0.8em;
 }
 
@@ -100,12 +113,29 @@ body{
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .navigation-menu, .header-actions .search-bar {
+    .navigation-menu, .search-bar {
         display: none;
+    }
+
+    .search-icon {
+        display: block;
+    }
+
+    .search-bar.active {
+        display: flex;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 10;
     }
 
     .hamburger-menu {
         display: flex;
+        margin-left: 10px;
     }
 
     .header-container {
@@ -117,10 +147,12 @@ body{
         flex-direction: column;
         position: absolute;
         top: 60px;
-        left: 0;
-        width: 100%;
+        right: 0;
+        width: fit-content;
         background-color: white;
-        border-top: 1px solid #ddd;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        z-index: 10;
     }
 
     .navigation-menu.active ul {
@@ -134,9 +166,9 @@ body{
     }
 }
 
-/* Hero Section Styles */
+/* Hero Section */
 .hero-section {
-    background-image: url('../assets/hero-background.jpg'); /* Replace with a high-quality background image */
+    background-image: url('../assets/hero-background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -152,7 +184,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
